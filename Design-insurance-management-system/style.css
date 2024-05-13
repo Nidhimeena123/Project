@@ -150,7 +150,7 @@
 
 /* Footer */
 .footer{
-    background-color: rgb(54, 114, 164);
+    background-color: rgb(18, 18, 19);
     padding: 40px 60px;
     margin-top: 50px;
 }
@@ -210,4 +210,75 @@
 }
 .news-content p{
     padding: 20px 10px;
+}
+
+/* Questions */
+.Questions{
+    height: 700px;
+    color: black;
+    text-align: center;
+}
+
+.Topic h1{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;   
+}
+
+.Questions-container{
+    padding: 60px;
+}
+
+.accordion{
+    margin: 20px auto;
+    width: 100%;
+    max-width: 980px;
+}
+
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion li label{
+     display: flex;
+     align-items: center;
+     padding: 27px;
+     font-size: 25px;
+     font-weight: 500;
+     background-color: rgb(54, 114, 164);
+     cursor: pointer;
+     color: white;
+}
+
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 210px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"]{
+      display: none;
+}
+
+.accordion .content{
+    background-color: rgb(54, 114, 164);
+    color: white;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    font-size: 25px;
+    font-weight: 500;
+    overflow: hidden;
+    transition: max-height 0s, padding 0.3s;
+}
+.accordion input[type="radio"]:checked + label + .content{
+     max-height: 600px;
+     padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(130deg);
 }
